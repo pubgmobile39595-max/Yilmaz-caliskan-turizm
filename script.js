@@ -17,7 +17,7 @@ hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
-// Close mobile menu on link click
+// Menü linkine tıklayınca kapansın
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
@@ -25,81 +25,83 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-// Counter animation
+// ===== Sayaç Animasyonu (Düzeltilmiş) =====
 const counters = document.querySelectorAll('.stat-number');
-const speed = 200;
 
-const animateCounters = () => {
-    counters.forEach(counter => {
-        const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText;
-        const increment = target / speed;
+function animateCounter(counter) {
+    const target = +counter.getAttribute('data-target');
+    const duration = 2000; // 2 saniye
+    const stepTime = 20;
+    const totalSteps = duration / stepTime;
+    const increment = target / totalSteps;
+    let current = 0;
 
-        if (count < target) {
-            counter.innerText = Math.ceil(count + increment);
-            setTimeout(animateCounters, 20);
-        } else {
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
             counter.innerText = target;
+            clearInterval(timer);
+        } else {
+            counter.innerText = Math.floor(current);
         }
-    });
-};
-
-// Intersection Observer for counters
-const aboutSection = document.querySelector('.about');
-const observerOptions = {
-    threshold: 0.3
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            animateCounters();
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-if (aboutSection) {
-    observer.observe(aboutSection);
+    }, stepTime);
 }
 
-// Testimonials slider
+// Sayfa kaydırılınca sayaçları başlat
+const aboutSection = document.querySelector('.about');
+let countersStarted = false;
+
+const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !countersStarted) {
+            counters.forEach(counter => animateCounter(counter));
+            countersStarted = true;
+            counterObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.4 });
+
+if (aboutSection) {
+    counterObserver.observe(aboutSection);
+}
+
+// ===== Yorumlar Slider =====
 const testimonials = document.querySelectorAll('.testimonial');
 const dots = document.querySelectorAll('.dot');
 let currentTestimonial = 0;
 
-const showTestimonial = (index) => {
+function showTestimonial(index) {
     testimonials.forEach(t => t.classList.remove('active'));
     dots.forEach(d => d.classList.remove('active'));
-    
+
     testimonials[index].classList.add('active');
     dots[index].classList.add('active');
     currentTestimonial = index;
-};
+}
 
 dots.forEach(dot => {
     dot.addEventListener('click', () => {
-        showTestimonial(+dot.getAttribute('data-index'));
+        showTestimonial(+dot.dataset.index);
     });
 });
 
-// Auto slide testimonials
+// Otomatik kaydır
 setInterval(() => {
     let next = (currentTestimonial + 1) % testimonials.length;
     showTestimonial(next);
 }, 5000);
 
-// Form submit (demo)
+// ===== Form =====
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('Teşekkürler! Mesajınız alındı. En kısa sürede size dönüş yapacağız.\n\n(Not: Bu form demo amaçlıdır. Gerçek iletişim için telefon veya e-posta kullanın.)');
+        alert('Teşekkürler! Mesajınız alındı.\n\n(Not: Bu form şu an demo amaçlıdır.)');
         contactForm.reset();
     });
 }
 
-// Smooth reveal on scroll (simple)
+// ===== Kartların yumuşak görünmesi =====
 const revealElements = document.querySelectorAll('.tour-card, .feature, .gallery-item');
 
 const revealObserver = new IntersectionObserver((entries) => {
@@ -109,11 +111,11 @@ const revealObserver = new IntersectionObserver((entries) => {
             entry.target.style.transform = 'translateY(0)';
         }
     });
-}, { threshold: 0.1 });
+}, { threshold: 0.15 });
 
 revealElements.forEach(el => {
     el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'all 0.6s ease';
+    el.style.transform = 'translateY(40px)';
+    el.style.transition = 'all 0.7s ease';
     revealObserver.observe(el);
 });
