@@ -3,277 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yılmaz Çalışkan | Premium Turizm</title>
-    <meta name="description" content="Yılmaz Çalışkan ile dünyanın en özel destinasyonlarını keşfedin. Lüks ve unutulmaz seyahat deneyimleri.">
+    <title>Yılmaz Çalışkan Turizm | Yurt İçi & Yurt Dışı Turlar</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#home" class="logo">YILMAZ ÇALIŞKAN</a>
-            <ul class="nav-links">
-                <li><a href="#home">Ana Sayfa</a></li>
-                <li><a href="#about">Hakkında</a></li>
-                <li><a href="#tours">Turlar</a></li>
-                <li><a href="#gallery">Galeri</a></li>
-                <li><a href="#testimonials">Yorumlar</a></li>
-                <li><a href="#contact" class="nav-cta">Rezervasyon</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero -->
-    <section id="home" class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <p class="hero-subtitle">Dünyayı Farklı Görmenin Adı</p>
-            <h1 class="hero-title">Yılmaz Çalışkan</h1>
-            <p class="hero-desc">Sıradan turizm anlayışını yıkan, her detayı el işçiliği gibi işleyen premium seyahat deneyimleri.</p>
-            <div class="hero-buttons">
-                <a href="#tours" class="btn btn-primary">Turları Keşfet</a>
-                <a href="#about" class="btn btn-outline">Yılmaz Kimdir?</a>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <span></span>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="about">
+    <!-- Üst Bar -->
+    <div class="top-bar">
         <div class="container">
-            <div class="about-grid">
-                <div class="about-image">
-                    <div class="image-frame">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=750&fit=crop" alt="Yılmaz Çalışkan">
-                    </div>
-                    <div class="experience-badge">
-                        <span class="number">18+</span>
-                        <span class="text">Yıl Deneyim</span>
-                    </div>
+            <span>📞 0850 123 45 67</span>
+            <span>7/24 Destek</span>
+            <div class="top-right">
+                <a href="#">Yardım</a>
+                <a href="#">Giriş Yap</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Yılmaz Çalışkan</a>
+            <nav class="main-nav">
+                <a href="index.html">Ana Sayfa</a>
+                <a href="turlar.html">Turlar</a>
+                <a href="#">Yurt Dışı</a>
+                <a href="#">Yurt İçi</a>
+                <a href="#">Kampanyalar</a>
+                <a href="#">İletişim</a>
+            </nav>
+            <a href="turlar.html" class="btn-header">Turları İncele</a>
+        </div>
+    </header>
+
+    <!-- Hero Search -->
+    <section class="hero-search">
+        <div class="container">
+            <h1>Hayalinizdeki Tatili Bulun</h1>
+            <p>Yılmaz Çalışkan ile güvenli ve konforlu seyahat</p>
+
+            <div class="search-box">
+                <div class="search-item">
+                    <label>Nereye?</label>
+                    <input type="text" placeholder="Şehir, ülke veya tur adı">
                 </div>
-                <div class="about-content">
-                    <span class="section-label">Kurucu & Rehber</span>
-                    <h2>Yılmaz Çalışkan</h2>
-                    <p class="lead">Turizm sektöründe “standart” kelimesini sözlüğünden silmiş bir isim.</p>
-                    <p>18 yılı aşkın süredir dünyanın dört bir yanında seyahat eden Yılmaz Çalışkan, sıradan tur paketlerinin ötesine geçerek her misafirine özel, unutulmaz ve kişiselleştirilmiş deneyimler sunuyor.</p>
-                    <p>Kapadokya’nın peri bacalarından Santorini’nin gün batımına, Maldivler’in kristal sularından Norveç’in kuzey ışıklarına kadar… Her rota, her detay, her an onun imzasını taşıyor.</p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="stat-number" data-target="2400">0</span>+
-                            <span class="stat-label">Mutlu Misafir</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number" data-target="47">0</span>
-                            <span class="stat-label">Ülke</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number" data-target="120">0</span>+
-                            <span class="stat-label">Özel Rota</span>
-                        </div>
-                    </div>
+                <div class="search-item">
+                    <label>Ne Zaman?</label>
+                    <input type="text" placeholder="Tarih seçin">
                 </div>
+                <div class="search-item">
+                    <label>Kişi Sayısı</label>
+                    <select>
+                        <option>2 Kişi</option>
+                        <option>1 Kişi</option>
+                        <option>3 Kişi</option>
+                        <option>4+ Kişi</option>
+                    </select>
+                </div>
+                <button class="btn-search">TUR ARA</button>
             </div>
         </div>
     </section>
 
-    <!-- Tours -->
-    <section id="tours" class="tours">
+    <!-- Öne Çıkan Turlar -->
+    <section class="featured">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">Seçkin Rotalar</span>
+            <div class="section-title">
                 <h2>Öne Çıkan Turlar</h2>
-                <p>Her biri Yılmaz Çalışkan’ın kendi deneyimleriyle şekillendirilmiş özel programlar</p>
+                <a href="turlar.html">Tüm Turları Gör →</a>
             </div>
-            <div class="tours-grid">
-                <article class="tour-card">
-                    <div class="tour-image">
-                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop" alt="Kapadokya">
-                        <div class="tour-badge">En Popüler</div>
-                    </div>
-                    <div class="tour-content">
-                        <h3>Kapadokya Sihri</h3>
-                        <p>Balon turları, yeraltı şehirleri ve şarap tadımı ile 4 günlük özel program.</p>
-                        <div class="tour-meta">
-                            <span>4 Gün</span>
-                            <span>Kişi başı ₺18.500</span>
-                        </div>
-                        <a href="#contact" class="tour-link">Detay & Rezervasyon →</a>
-                    </div>
-                </article>
 
-                <article class="tour-card">
-                    <div class="tour-image">
-                        <img src="https://images.unsplash.com/photo-1570077186671-e5d12b3e0b5a?w=800&h=600&fit=crop" alt="Santorini">
+            <div class="tour-list">
+                <!-- Tur Kartı 1 -->
+                <div class="tour-card">
+                    <div class="tour-img">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=280&fit=crop" alt="Kapadokya">
+                        <span class="badge">En Popüler</span>
                     </div>
-                    <div class="tour-content">
-                        <h3>Santorini Gün Batımı</h3>
-                        <p>Beyaz evler, mavi kubbeler ve Ege’nin en romantik gün batımları.</p>
+                    <div class="tour-info">
+                        <h3>Kapadokya Balon & Kültür Turu</h3>
+                        <p class="departure">İstanbul Çıkışlı</p>
                         <div class="tour-meta">
-                            <span>5 Gün</span>
-                            <span>Kişi başı €2.450</span>
+                            <span>📅 15 Eki - 18 Eki 2026</span>
+                            <span>⏱ 3 Gece 4 Gün</span>
                         </div>
-                        <a href="#contact" class="tour-link">Detay & Rezervasyon →</a>
+                        <div class="tags">
+                            <span class="tag green">Erken Rezervasyon</span>
+                            <span class="tag">Konaklama Dahil</span>
+                        </div>
                     </div>
-                </article>
+                    <div class="tour-price">
+                        <div class="price">
+                            <span class="from">Kişi başı</span>
+                            <strong>8.950 ₺</strong>
+                        </div>
+                        <a href="turlar.html" class="btn-detail">TURU İNCELE</a>
+                    </div>
+                </div>
 
-                <article class="tour-card">
-                    <div class="tour-image">
-                        <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&h=600&fit=crop" alt="Maldivler">
+                <!-- Tur Kartı 2 -->
+                <div class="tour-card">
+                    <div class="tour-img">
+                        <img src="https://images.unsplash.com/photo-1570077186671-e5d12b3e0b5a?w=400&h=280&fit=crop" alt="Santorini">
                     </div>
-                    <div class="tour-content">
+                    <div class="tour-info">
+                        <h3>Santorini & Atina Turu</h3>
+                        <p class="departure">İstanbul Çıkışlı</p>
+                        <div class="tour-meta">
+                            <span>📅 22 Eki - 27 Eki 2026</span>
+                            <span>⏱ 5 Gece 6 Gün</span>
+                        </div>
+                        <div class="tags">
+                            <span class="tag green">Uçak + Otel</span>
+                            <span class="tag">Rehberli</span>
+                        </div>
+                    </div>
+                    <div class="tour-price">
+                        <div class="price">
+                            <span class="from">Kişi başı</span>
+                            <strong>24.900 ₺</strong>
+                        </div>
+                        <a href="turlar.html" class="btn-detail">TURU İNCELE</a>
+                    </div>
+                </div>
+
+                <!-- Tur Kartı 3 -->
+                <div class="tour-card">
+                    <div class="tour-img">
+                        <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=400&h=280&fit=crop" alt="Maldivler">
+                        <span class="badge red">Son 4 Koltuk</span>
+                    </div>
+                    <div class="tour-info">
                         <h3>Maldivler Exclusive</h3>
-                        <p>Overwater villa, özel yat ve su sporları ile tam izolasyon.</p>
+                        <p class="departure">İstanbul Çıkışlı</p>
                         <div class="tour-meta">
-                            <span>7 Gün</span>
-                            <span>Kişi başı $4.900</span>
+                            <span>📅 5 Kas - 12 Kas 2026</span>
+                            <span>⏱ 7 Gece 8 Gün</span>
                         </div>
-                        <a href="#contact" class="tour-link">Detay & Rezervasyon →</a>
-                    </div>
-                </article>
-
-                <article class="tour-card">
-                    <div class="tour-image">
-                        <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&h=600&fit=crop" alt="Norveç">
-                    </div>
-                    <div class="tour-content">
-                        <h3>Kuzey Işıkları</h3>
-                        <p>Tromsø’da aurora hunting, köpek kızakları ve buz oteli deneyimi.</p>
-                        <div class="tour-meta">
-                            <span>6 Gün</span>
-                            <span>Kişi başı €3.200</span>
+                        <div class="tags">
+                            <span class="tag green">Overwater Villa</span>
+                            <span class="tag">Her Şey Dahil</span>
                         </div>
-                        <a href="#contact" class="tour-link">Detay & Rezervasyon →</a>
                     </div>
-                </article>
+                    <div class="tour-price">
+                        <div class="price">
+                            <span class="from">Kişi başı</span>
+                            <strong>89.500 ₺</strong>
+                        </div>
+                        <a href="turlar.html" class="btn-detail">TURU İNCELE</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Us -->
+    <!-- Neden Biz -->
     <section class="why-us">
         <div class="container">
-            <div class="section-header light">
-                <span class="section-label">Farkımız</span>
-                <h2>Neden Yılmaz Çalışkan?</h2>
-            </div>
-            <div class="features-grid">
-                <div class="feature">
-                    <div class="feature-icon">01</div>
-                    <h3>Kişisel Rehberlik</h3>
-                    <p>Her turda Yılmaz Çalışkan veya özel yetiştirdiği ekibi sizinle birlikte.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">02</div>
-                    <h3>Gizli Mekanlar</h3>
-                    <p>Turistlerin bilmediği, sadece yerel bağlantılarla erişilebilen noktalar.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">03</div>
-                    <h3>Sıfır Stres</h3>
-                    <p>Uçak, transfer, otel, aktiviteler… Her şey önceden kusursuz planlanır.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">04</div>
-                    <h3>Özel Deneyimler</h3>
-                    <p>Standart tur paketlerinin dışında, tamamen size özel rotalar.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery -->
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Anılar</span>
-                <h2>Galeri</h2>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item large">
-                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&h=600&fit=crop" alt="Seyahat">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&h=400&fit=crop" alt="Seyahat">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1530789255308-6bf899aebeb1?w=600&h=400&fit=crop" alt="Seyahat">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=400&fit=crop" alt="Seyahat">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=600&h=400&fit=crop" alt="Seyahat">
-                </div>
-                <div class="gallery-item large">
-                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop" alt="Seyahat">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Misafirlerimiz</span>
-                <h2>Onlar Ne Diyor?</h2>
-            </div>
-            <div class="testimonials-slider">
-                <div class="testimonial active">
-                    <p class="quote">“Yılmaz ile Kapadokya’ya gittik. Turist gibi değil, sanki yerel biriyle seyahat ediyormuşuz gibi hissettik. Hayatımın en güzel 4 günüydü.”</p>
-                    <div class="author">
-                        <strong>Ayşe & Mehmet Kaya</strong>
-                        <span>İstanbul</span>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <p class="quote">“Santorini’de gün batımı için özel bir yer ayarlamıştı. Kimse yoktu. Sadece biz ve o manzara… Teşekkürler Yılmaz.”</p>
-                    <div class="author">
-                        <strong>Elif Demir</strong>
-                        <span>Ankara</span>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <p class="quote">“Maldivler’e gitmeden önce endişeliydim. Ama her şey o kadar kusursuz planlanmıştı ki… Bir daha başka kimseyle seyahat etmem.”</p>
-                    <div class="author">
-                        <strong>Caner Yıldız</strong>
-                        <span>İzmir</span>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-dots">
-                <span class="dot active" data-index="0"></span>
-                <span class="dot" data-index="1"></span>
-                <span class="dot" data-index="2"></span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <span class="section-label">İletişim</span>
-                    <h2>Hayalinizdeki Seyahati<br>Birlikte Planlayalım</h2>
-                    <p>Size özel bir rota mı istiyorsunuz? Yoksa listedeki turlardan birine mi katılmak istiyorsunuz? Bize yazın, 24 saat içinde dönüş yapalım.</p>
-                    <div class="contact-details">
-                        <div class="detail">
-                            <span class="label">Telefon</span>
-                            <a href="tel:+905551234567">+90 555 123 45 67</a>
-                        </div>
-                        <div class="detail">
-                            <span class="label">E-posta</span>
-                            <a href="mailto:info@yilmazcaliskan.com">info@yilmazcaliskan.com</a>
-                        </div>
-                        <div class="detail">
-                            <span class
+            <h2>Neden Yılmaz Çalışkan?</h2>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="icon">🛡️</div>
+                    <h3>Güvenli Seyahat</h3>
+                    <p>18 yıllık tecrübe ve lisanslı ac
