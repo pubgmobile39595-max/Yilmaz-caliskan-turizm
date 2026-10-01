@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turlar | Yılmaz Çalışkan Turizm</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="container">
+            <span>📞 0850 123 45 67</span>
+            <span>7/24 Destek</span>
+            <div class="top-right">
+                <a href="#">Yardım</a>
+                <a href="#">Giriş Yap</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Yılmaz Çalışkan</a>
+            <nav class="main-nav">
+                <a href="index.html">Ana Sayfa</a>
+                <a href="turlar.html" class="active">Turlar</a>
+                <a href="#">Yurt Dışı</a>
+                <a href="#">Yurt İçi</a>
+                <a href="#">Kampanyalar</a>
+                <a href="#">İletişim</a>
+            </nav>
+            <a href="turlar.html" class="btn-header">Turları İncele</a>
+        </div>
+    </header>
+
+    <!-- Arama Kutusu -->
+    <div class="search-strip">
+        <div class="container">
+            <div class="search-box compact">
+                <div class="search-item">
+                    <label>Nereye?</label>
+                    <input type="text" value="Tüm Turlar">
+                </div>
+                <div class="search-item">
+                    <label>Ne Zaman?</label>
+                    <input type="text" placeholder="Tarih seçin">
+                </div>
+                <button class="btn-search">ARA</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container main-content">
+        <!-- Sol Filtreler -->
+        <aside class="filters">
+            <h3>Sonuçları Filtrele</h3>
+
+            <div class="filter-group">
+                <h4>Bölge</h4>
+                <label><input type="checkbox"> Kapadokya (12)</label>
+                <label><input type="checkbox"> Ege (18)</label>
+                <label><input type="checkbox"> Akdeniz (9)</label>
+                <label><input type="checkbox"> Yurt Dışı (24)</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Çıkış Noktası</h4>
+                <label><input type="checkbox"> İstanbul (35)</label>
+                <label><input type="checkbox"> Ankara (12)</label>
+                <label><input type="checkbox"> İzmir (8)</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Süre</h4>
+                <label><input type="checkbox"> 1-3 Gece</label>
+                <label><input type="checkbox"> 4-6 Gece</label>
+                <label><input type="checkbox"> 7+ Gece</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Fiyat Aralığı</h4>
+                <div class="price-range">
+                    <input type="number" placeholder="Min">
+                    <span>-</span>
+                    <input type="number" placeholder="Max">
+                </div>
+            </div>
+        </aside>
+
+        <!-- Sağ Tur Listesi -->
+        <main class="tours-main">
+            <div class="results-header">
+                <h1>Tüm Turlar <span>47 tur bulundu</span></h1>
+                <select>
+                    <option>Önerilen Sıralama</option>
+                    <option>Fiyata Göre Artan</option>
+                    <option>Fiyata Göre Azalan</option>
+                    <option>En Yakın Tarih</option>
+                </select>
+            </div>
+
+            <!-- Tur Kartları -->
+            <div class="tour-list">
+                <div class="tour-card">
+                    <div class="tour-img">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=280&fit=crop" alt="Kapadokya">
+                    </div>
+                    <div class="tour-info">
+                        <h3>Kapadokya Balon & Kültür Turu</h3>
+                        <p class="departure">İstanbul Çıkışlı</p>
+                        <div class="tour-meta">
+                            <span>📅 15 Eki - 18 Eki 2026 arası 3 tur</span>
+                            <span>⏱ 3 Gece 4 Gün</span>
+                        </div>
+                        <div class="tags">
+                            <span class="tag green">Erken Rezervasyon İndirimi</span>
+                            <span class="tag">Balon Turu Dahil</span>
+                        </div>
+                    </div>
+                    <div class="tour-price">
+                        <div class="price">
+                            <span class="from">'dan başlayan fiyatlar</span>
+                            <strong>8.950 ₺</strong>
+                        </div>
+                        <button class="btn-detail">TURU İNCELE</button>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-img">
+                        <img src="https://images.unsplash.com/photo-1570077186671-e5d12b3e0b5a?w=400&h=280&fit=crop" alt="Santorini">
+                    </div>
+                    <div class="tour-info">
+                        <h3>Santorini & Atina Klasik Turu</h3>
+                        <p class="departure">İstanbul Çıkışlı</p>
+                        <div class="tour-meta">
+                            <span>📅 22 Eki - 27 Eki 2026</span>
+                            <span>⏱ 5 Gece 6 Gün</span>
+                        </div>
+                        <div class="tags">
+                            <span class="tag green">Uçaklı</span>
+                            <span class="tag">Rehberli Tur</span>
+                        </div>
+                    </div>
+                    <div class="tour-price">
+                        <div class="price">
+                            <span class="from">'dan başlayan fiyatlar</span>
+                            <strong>24.900 ₺</strong>
+                        </div>
+                        <button class="btn-detail">TURU İNCELE</button>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-img">
+                        <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=400&h=280&fit=crop" alt="Norveç">
+                    </div>
+                    <div class="tour-info">
+                        <h3>Kuzey Işıkları - Tromsø Turu</h3>
+                        <p class="departure">İstanbul Çıkışlı</p>
+                        <div class="tour-meta">
+                            <span>📅 10 Kas - 16 Kas 2026</span>
+                            <span>⏱ 6 Gece 7 Gün</span>
+                        </div>
+                        <div class="tags">
+                            <span class="tag green">Aurora Hunting</span>
+                            <span class="tag">Özel Grup</span>
+                        </div>
+                    </div>
+                    <div class="tour-price">
+                        <div class="price">
+                            <span class="from">'dan başlayan fiyatlar</span>
+                            <strong>42.750 ₺</strong>
+                        </div>
+                        <button class="btn-detail">TURU İNCELE</button>
+                    </div>
+                </div>
+
+                <div class="tour-card">
+                    <div class="tour-img">
+                        <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=400&h=280&fit=crop" alt="Maldivler">
+                        <span class="badge red">Son 3 Koltuk</span>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Maldivler Exclusive Overwater</h3>
+                        <p class="departure">İstanbul Çıkışlı</p>
+                        <div class="tour-meta">
+                            <span>📅 5 Kas - 12 Kas 2026</span>
+                            <span>⏱ 7 Gece 8 Gün</span>
+                        </div>
+                        <div class="tags">
+                            <span class="tag green">Her Şey Dahil</span>
+                            <span class="tag">Özel Transfer</span>
+                        </div>
+                    </div>
+                    <div class="tour-price">
+                        <div class="price">
+                            <span class="from">'dan başlayan fiyatlar</span>
+                            <strong>89.500 ₺</strong>
+                        </div>
+                        <button class="btn-detail">TURU İNCELE</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="copyright">
+                © 2026 Yılmaz Çalışkan Turizm. Tüm hakları saklıdır.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+  </html>
